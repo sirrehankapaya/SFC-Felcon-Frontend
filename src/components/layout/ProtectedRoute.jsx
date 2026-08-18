@@ -13,10 +13,12 @@ export default function ProtectedRoute({ allow, children }) {
     );
   }
 
-  if (!user) return <Navigate to="/login" replace />;
-  if (!user.role) return <Navigate to="/login" replace />;
-  if (allow && !allow.includes(user.role)) {
-    return <Navigate to={`/${user.role}/dashboard`} replace />;
-  }
+  // Temporarily removed protected routing rules for video recording
+  // if (!user) return <Navigate to="/login" replace />;
+  // if (!user.role) return <Navigate to="/login" replace />;
+  // if (allow && !allow.includes(user.role)) {
+  //   return <Navigate to={`/${user.role}/dashboard`} replace />;
+  // }
+  
   return children;
 }

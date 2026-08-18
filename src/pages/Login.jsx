@@ -160,6 +160,8 @@ export default function Login() {
           setLoading(false);
           alert('Account created successfully! Please sign in with your credentials.');
         } else {
+          // Auto-login for staff/guard so the redirect doesn't fail
+          await login(email.trim().toLowerCase(), password);
           setLoading(false);
           alert('Account created successfully! Redirecting to your dashboard...');
           setTimeout(() => {
