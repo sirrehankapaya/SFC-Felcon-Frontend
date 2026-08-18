@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef7f6;
+  --color-brand-100: #d3ebe8;
+  --color-brand-200: #a8d7d1;
+  --color-brand-300: #78bfb6;
+  --color-brand-400: #47a396;
+  --color-brand-500: #2d8a7d;
+  --color-brand-600: #226e64;
+  --color-brand-700: #1c5751;
+  --color-brand-800: #184641;
+  --color-brand-900: #163a37;
+
+  --color-ink-50: #f6f7f8;
+  --color-ink-100: #eceef0;
+  --color-ink-200: #d5d9de;
+  --color-ink-300: #b1b8c1;
+  --color-ink-400: #8790a0;
+  --color-ink-500: #687184;
+  --color-ink-600: #52596b;
+  --color-ink-700: #414757;
+  --color-ink-800: #2b2f3a;
+  --color-ink-900: #1a1d24;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+}
+
+/* small helper used by the amenity calendar grid, easier than a utility soup */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--color-ink-300);
+  border-radius: 999px;
+}
